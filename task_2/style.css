@@ -1,6 +1,7 @@
 *,
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     font-size: 14px;
     line-height: 140%;
     background-color: #FFFFFF;
+
 }
 
 a {
@@ -154,6 +156,7 @@ a:hover {
     padding: 17px 52px;
     background: #FFFFFF;
     border-radius: 6px;
+    border: 1px solid transparent;
 }
 
 .mainpage__btn:hover {
