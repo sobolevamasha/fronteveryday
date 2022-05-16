@@ -389,7 +389,7 @@ a:hover {
     width: 255px;
 }
 
-.contacts__wrap .contacts__input:first-child {
+.contacts__input--mr {
     margin-right: 30px;
 }
 
@@ -466,18 +466,32 @@ a:hover {
 
 .footer__img {
     display: block;
-    width: 215px;
+    min-width: 215px !important;
 }
 
 @media only screen and (max-width: 1150px) {
     .features__cards {
         flex-direction: column;
     }
+
+    .features__card {
+        margin-bottom: 100px;
+    }
+    .features__card:not(:first-child) {
+        margin-right: 0;
+    }
+    .features__card:not(:last-child) {
+        margin-left: 0;
+    }
 }
 
 @media only screen and (max-width: 960px) {
     .mainpage {
         height: calc(100vh - 122px);
+    }
+
+    .mainpage__title {
+        font-size: 65px;
     }
 
     .teaser__wrap,
@@ -667,10 +681,12 @@ a:hover {
     .header__wrap {
         flex-direction: column;
         align-items: flex-end;
+        padding-top: 25px;
+    margin-bottom: 15px;
     }
 
     .header__logo {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .header__btn {
@@ -679,7 +695,7 @@ a:hover {
     }
 
     .header__menu--bars {
-        top: -105px;
+        top: -115px;
     }
 
     .header__items.open {
@@ -687,11 +703,12 @@ a:hover {
     }
 
     .mainpage {
-        height: calc(100vh - 195px);
+        height: calc(100vh - 172px);
     }
 
     .mainpage__title {
         font-size: 30px;
+        line-height: 100%;
     }
 
     .mainpage__text {
@@ -724,6 +741,8 @@ a:hover {
         margin-right: 0;
     }
 
+    
+
     .footer__menu {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -746,7 +765,7 @@ a:hover {
 
     .features__card,
     .features__card:not(:last-child) {
-        margin-bottom: 0;
+        margin-bottom: 70px;
     }
 
     .tech {
