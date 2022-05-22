@@ -64,23 +64,23 @@ allSelectors();
 
 var partners = {
     "1": {
-        "img": "../images/partners/1.png",
+        "img": "./images/partners/1.png",
         "alt": "1",
     },
     "2": {
-        "img": "../images/partners/2.png",
+        "img": "./images/partners/2.png",
         "alt": "2",
     },
     "3": {
-        "img": "../images/partners/3.png",
+        "img": "./images/partners/3.png",
         "alt": "3",
     },
     "4": {
-        "img": "../images/partners/4.png",
+        "img": "./images/partners/4.png",
         "alt": "4",
     },
     "5": {
-        "img": "../images/partners/5.png",
+        "img": "./images/partners/5.png",
         "alt": "5",
     }
 }
@@ -94,7 +94,7 @@ document.getElementById('out').innerHTML = out;
 
 var popularEstate = {
     "1": {
-        "img": "../images/estate/1.jpg",
+        "img": "./images/estate/1.jpg",
         "name": "Capital hill residence",
         "location": "East London",
         "bedroom": 6,
@@ -104,7 +104,7 @@ var popularEstate = {
         "button": "View Details",
     },
     "2": {
-        "img": "../images/estate/2.jpg",
+        "img": "./images/estate/2.jpg",
         "name": "Picket Fence Realty",
         "location": "East London",
         "bedroom": 6,
@@ -114,7 +114,7 @@ var popularEstate = {
         "button": "View Details",
     },
     "3": {
-        "img": "../images/estate/3.jpg",
+        "img": "./images/estate/3.jpg",
         "name": "Banyon Tree Realty",
         "location": "East London",
         "bedroom": 6,
@@ -124,7 +124,7 @@ var popularEstate = {
         "button": "View Details",
     },
     "4": {
-        "img": "../images/estate/4.jpg",
+        "img": "./images/estate/4.jpg",
         "name": "Corsair Real Estate",
         "location": "East London",
         "bedroom": 6,
@@ -134,7 +134,7 @@ var popularEstate = {
         "button": "View Details",
     },
     "5": {
-        "img": "../images/estate/5.jpg",
+        "img": "./images/estate/5.jpg",
         "name": "Sequoia Real Estate",
         "location": "East London",
         "bedroom": 6,
@@ -144,7 +144,7 @@ var popularEstate = {
         "button": "View Details",
     },
     "6": {
-        "img": "../images/estate/6.jpg",
+        "img": "./images/estate/6.jpg",
         "name": "Capital hill residence",
         "location": "East London",
         "bedroom": 6,
@@ -176,17 +176,17 @@ buttons.forEach(function (button) {
 
 featuresItems = {
     "1" : {
-        "icon" : "../images/icons/sec.svg",
+        "icon" : "./images/icons/sec.svg",
         "title" : "100% Security",
         "text" : "For many of us, buying a home is a dre and one not easily attainable."
     },
     "2" : {
-        "icon" : "../images/icons/conditioner.svg",
+        "icon" : "./images/icons/conditioner.svg",
         "title" : "Free air conditioner",
         "text" : "For many of us, buying a home is a dre and one not easily attainable."
     },
     "3" : {
-        "icon" : "../images/icons/garden.svg",
+        "icon" : "./images/icons/garden.svg",
         "title" : "Flower garden",
         "text" : "For many of us, buying a home is a dre and one not easily attainable."
     },
@@ -202,17 +202,17 @@ document.getElementById('features__list').innerHTML = featuresList;
 
 featuresItems2 = {
     "1" : {
-        "icon" : "../images/icons/car.svg",
+        "icon" : "./images/icons/car.svg",
         "title" : "Parkers & movers",
         "text" : "For many of us, buying a home is a dre and one not easily attainable."
     },
     "2" : {
-        "icon" : "../images/icons/sofa.svg",
+        "icon" : "./images/icons/sofa.svg",
         "title" : "Rental furniture",
         "text" : "For many of us, buying a home is a dre and one not easily attainable."
     },
     "3" : {
-        "icon" : "../images/icons/pool.svg",
+        "icon" : "./images/icons/pool.svg",
         "title" : "Swimming pool",
         "text" : "For many of us, buying a home is a dre and one not easily attainable."
     },
