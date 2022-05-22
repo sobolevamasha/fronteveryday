@@ -1,15 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gulp</title>
+    <title>RubyHome</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
+
 </head>
+
 <body>
-    Hello moto
-    
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="logo" width="250">
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#">Properties</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#">About us</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#">Blog</a>
+                        </li>
+                    </ul>
+                    <button class="btn">Contact us</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="first">
+            <div class="container wrap__container">
+                <div class="first__content">
+                    <h1 class="first__title">
+                        Find the perfect place to stay with your family
+                    </h1>
+                    <p class="first__text">
+                        Buying a home is a life-changing experience, so shouldn’t your real estate agent be a life
+                        changer.
+                    </p>
+                    <div class="tabs">
+                        <div>
+                            <div class="tabs__nav">
+                                <button class="tabs__btn tabs__btn_active">Buy</button>
+                                <button class="tabs__btn">Rent</button>
+                                <button class="tabs__btn">Sell</button>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__pane tabs__pane_show">
+                                    <div>
+                                        <button class="tabs__pane-btn">Location</button>
+                                        <select class="tabs__pane-select" name="Location">
+                                            <option>Tbilisi</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button class="tabs__pane-btn">Property type</button>
+                                        <select class="tabs__pane-select" name="Property type">
+                                            <option>Duplex</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button class="tabs__pane-btn">Price</button>
+                                        <select class="tabs__pane-select" name="Price">
+                                            <option>$4000-$8000</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn">Search</button>
+                                </div>
+                                <div class="tabs__pane">
+                                    Содержимое 2...
+                                </div>
+                                <div class="tabs__pane" id="content-3">
+                                    Содержимое 3...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="first__img" src="./images/building-first.jpg" alt="building">
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <h2 class="partners__title title">
+                    Our Partners
+                </h2>
+                <ul class="partners__list" id="out">
+                </ul>
+            </div>
+        </section>
+        <section class="popular">
+            <div class="container">
+                <h2 class="popular__title title">
+                    Popular Properties
+                </h2>
+                <ul class="popular__items" id="popular-items">
+
+                </ul>
+            </div>
+        </section>
+        <section class="features">
+            <div class="container">
+                <h2 class="features__title title">Property Featured</h2>
+                <p class="features__text">Real estate is a crowded field. But with the number of buyers purchasing homes through real estate agents and brokers growing there’s plenty of </p>
+
+                <div class="features__inner">
+                    <ul class="features__list" id="features__list">
+
+                    </ul>
+                    <img class="features__img" src="./images/features.jpg">
+                    <ul class="features__list" id="features__list2">
+
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
+
 </html>

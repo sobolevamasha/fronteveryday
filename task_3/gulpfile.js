@@ -8,6 +8,8 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
+
+
 function browsersync() {
     browserSync.init ({
         server: {
@@ -18,7 +20,9 @@ function browsersync() {
 }
 
 function styles() {
-    return src('app/scss/style.scss')
+    return src([
+        'app/scss/style.scss',
+    ])
     .pipe(scss({outputStyle: 'expanded'}))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({

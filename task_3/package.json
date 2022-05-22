@@ -4,7 +4,8 @@
   "description": "first gulp project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type": "module"
   },
   "author": "Mariia Soboleva",
   "license": "ISC",
@@ -19,5 +20,8 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
     "sass": "^1.35.2"
+  },
+  "dependencies": {
+    "choices.js": "^10.1.0"
   }
 }
