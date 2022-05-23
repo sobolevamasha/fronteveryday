@@ -168,58 +168,75 @@ console.log(buttons);
 buttons.forEach(function (button) {
     console.log(button);
     button.addEventListener('click', function () {
-            button.classList.toggle('popular__like--active')
-        
+        button.classList.toggle('popular__like--active')
+
     })
 })
 
 
 featuresItems = {
-    "1" : {
-        "icon" : "./images/icons/sec.svg",
-        "title" : "100% Security",
-        "text" : "For many of us, buying a home is a dre and one not easily attainable."
+    "1": {
+        "icon": "./images/icons/sec.svg",
+        "title": "100% Security",
+        "text": "For many of us, buying a home is a dre and one not easily attainable."
     },
-    "2" : {
-        "icon" : "./images/icons/conditioner.svg",
-        "title" : "Free air conditioner",
-        "text" : "For many of us, buying a home is a dre and one not easily attainable."
+    "2": {
+        "icon": "./images/icons/conditioner.svg",
+        "title": "Free air conditioner",
+        "text": "For many of us, buying a home is a dre and one not easily attainable."
     },
-    "3" : {
-        "icon" : "./images/icons/garden.svg",
-        "title" : "Flower garden",
-        "text" : "For many of us, buying a home is a dre and one not easily attainable."
+    "3": {
+        "icon": "./images/icons/garden.svg",
+        "title": "Flower garden",
+        "text": "For many of us, buying a home is a dre and one not easily attainable."
     },
 }
 
 var featuresList = '';
 for (var key in featuresItems) {
-    featuresList += '<li class="features__content"><div class="features__bg"><img src="' + featuresItems[key].icon + ' "></div><h4 class="features__head">' + featuresItems[key].title + '</h4> <p class="features__descr">'+ featuresItems[key].text + '</p></li>'
+    featuresList += '<li class="features__content"><div class="features__bg"><img src="' + featuresItems[key].icon + ' "></div><h4 class="features__head">' + featuresItems[key].title + '</h4> <p class="features__descr">' + featuresItems[key].text + '</p></li>'
 }
 document.getElementById('features__list').innerHTML = featuresList;
 
 
 
 featuresItems2 = {
-    "1" : {
-        "icon" : "./images/icons/car.svg",
-        "title" : "Parkers & movers",
-        "text" : "For many of us, buying a home is a dre and one not easily attainable."
+    "1": {
+        "icon": "./images/icons/car.svg",
+        "title": "Parkers & movers",
+        "text": "For many of us, buying a home is a dre and one not easily attainable."
     },
-    "2" : {
-        "icon" : "./images/icons/sofa.svg",
-        "title" : "Rental furniture",
-        "text" : "For many of us, buying a home is a dre and one not easily attainable."
+    "2": {
+        "icon": "./images/icons/sofa.svg",
+        "title": "Rental furniture",
+        "text": "For many of us, buying a home is a dre and one not easily attainable."
     },
-    "3" : {
-        "icon" : "./images/icons/pool.svg",
-        "title" : "Swimming pool",
-        "text" : "For many of us, buying a home is a dre and one not easily attainable."
+    "3": {
+        "icon": "./images/icons/pool.svg",
+        "title": "Swimming pool",
+        "text": "For many of us, buying a home is a dre and one not easily attainable."
     },
 }
 
 var featuresList2 = '';
 for (var key in featuresItems2) {
-    featuresList2 += '<li class="features__content"><div class="features__bg"><img src="' + featuresItems2[key].icon + ' "></div><h4 class="features__head">' + featuresItems2[key].title + '</h4> <p class="features__descr">'+ featuresItems2[key].text + '</p></li>'
+    featuresList2 += '<li class="features__content"><div class="features__bg"><img src="' + featuresItems2[key].icon + ' "></div><h4 class="features__head">' + featuresItems2[key].title + '</h4> <p class="features__descr">' + featuresItems2[key].text + '</p></li>'
 }
 document.getElementById('features__list2').innerHTML = featuresList2;
+
+
+var slider = tns({
+    container: '.my-slider',
+    items: 2,
+    controls: false,
+    navPosition: "bottom",
+    //nav: true,
+    slideBy: 1,
+    navAsThumbnails: true,
+    edgePadding: 20,
+
+
+    responsive: {
+
+    }
+});

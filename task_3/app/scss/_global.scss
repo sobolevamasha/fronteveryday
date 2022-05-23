@@ -97,3 +97,11 @@ body {
 .choices__list[aria-expanded] .choices__item--selectable {
     padding-right: 0;
 }
+
+a {
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: $orange;
+}

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RubyHome</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="css/style.min.css">
 
 </head>
@@ -15,9 +16,9 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <div class="logo">
+                <a href="#" class="logo">
                     <img src="./images/logo.png" alt="logo" width="250">
-                </div>
+                </a>
                 <nav class="header__menu">
                     <ul class="header__menu-list">
                         <li class="header__menu-item">
@@ -113,22 +114,247 @@
         <section class="features">
             <div class="container">
                 <h2 class="features__title title">Property Featured</h2>
-                <p class="features__text">Real estate is a crowded field. But with the number of buyers purchasing homes through real estate agents and brokers growing there’s plenty of </p>
-
+                <p class="features__text">Real estate is a crowded field. But with the number of buyers purchasing homes
+                    through real estate agents and brokers growing there’s plenty of </p>
                 <div class="features__inner">
                     <ul class="features__list" id="features__list">
-
                     </ul>
                     <img class="features__img" src="./images/features.jpg">
                     <ul class="features__list" id="features__list2">
-
                     </ul>
                 </div>
-
             </div>
         </section>
+        <section class="reviews">
+            <div class="container">
+                <span class="reviews__span">Reviews</span>
+                <h2 class="reviews__title title">Our valuable customer says</h2>
+                <ul class="my-slider reviews__slider" id="reviews__slider">
+                    <li class="reviews__slide">
+                        <div class="reviews__wrap">
+                            <img class="reviews__img" src="./images/reviews/1.png" alt="1">
+                            <div>
+                                <h4 class="reviews__head">Justin Lee</h4>
+                                <span class="reviews__job">Products Designer at Ito</span>
+                            </div>
+                        </div>
+                        <p class="reviews__text">A good real estate agent doesn’t disappear once the closing IN
+                            signed.Buying a bigger home
+                            doesn’t necessarily mean spendi more money.Been there. Done that. Sold. Bought
+                            Bringing It All Together.
+                        </p>
+                    </li>
+
+                    <li class="reviews__slide">
+                        <div class="reviews__wrap">
+                            <img class="reviews__img" src="./images/reviews/2.png" alt="2">
+                            <div>
+                                <h4 class="reviews__head">Angel Cathe</h4>
+                                <span class="reviews__job">Products Designer at Ito</span>
+                            </div>
+                        </div>
+                        <p class="reviews__text">A good real estate agent doesn’t disappear once the closing IN
+                            signed.Buying a bigger home doesn’t necessarily mean spendi more money.Been there. Done
+                            that. Sold. Bought be
+                            Bringing It All Together there.
+                        </p>
+                    </li>
+
+                    <li class="reviews__slide">
+                        <div class="reviews__wrap">
+                            <img class="reviews__img" src="./images/reviews/1.png" alt="1">
+                            <div>
+                                <h4 class="reviews__head">Justin Lee</h4>
+                                <span class="reviews__job">Products Designer at Ito</span>
+                            </div>
+                        </div>
+                        <p class="reviews__text">A good real estate agent doesn’t disappear once the closing IN
+                            signed.Buying a bigger home
+                            doesn’t necessarily mean spendi more money.Been there. Done that. Sold. Bought
+                            Bringing It All Together.
+                        </p>
+                    </li>
+
+                    <li class="reviews__slide">
+                        <div class="reviews__wrap">
+                            <img class="reviews__img" src="./images/reviews/2.png" alt="2">
+                            <div>
+                                <h4 class="reviews__head">Angel Cathe</h4>
+                                <span class="reviews__job">Products Designer at Ito</span>
+                            </div>
+                        </div>
+                        <p class="reviews__text">A good real estate agent doesn’t disappear once the closing IN
+                            signed.Buying a bigger home doesn’t necessarily mean spendi more money.Been there. Done
+                            that. Sold. Bought be
+                            Bringing It All Together there.
+                        </p>
+                    </li>
+                </ul>
+                <div id="custom-control"></div>
+            </div>
+        </section>
+        <section class="form">
+            <div class="container">
+                <div class="form__content">
+                    <h2 class="title form__title">Get listed your home as a owner</h2>
+                    <p class="form__text">Here is a list of the greatest real estate company slogans of all-time. These
+                        catchy slogans are followed by the Greatest Real Estate.</p>
+                    <form class="form__place">
+                        <label class="form__label">
+                            <input class="form__input" type="email" placeholder="Enter email address" required>
+                            <button class="form__btn btn" type="submit">Subscribe</button>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__left">
+                        <a href="#">
+                            <img class="footer__logo" src="./images/logo.png" alt="logo">
+                        </a>
+                        <div class="footer__text">Contrary to popular is not simply random text. It has
+                        </div>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#">
+                                    <svg width="30" height="30" viewbox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="30" height="30" rx="15" fill="#FE753F" />
+                                        <path
+                                            d="M16.9046 11.0539H18V9.0871C17.811 9.0603 17.1611 9 16.4041 9C14.8248 9 13.7429 10.0241 13.7429 11.9063V13.6386H12V15.8373H13.7429V21.3696H15.8797V15.8378H17.552L17.8175 13.6391H15.8792V12.1244C15.8797 11.4889 16.0457 11.0539 16.9046 11.0539Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#">
+                                    <svg width="30" height="30" viewbox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="30" height="30" rx="15" fill="#FE753F" />
+                                        <g clip-path="url(#clip0_1_147)">
+                                            <path
+                                                d="M19 9H11C10.4696 9 9.96086 9.21071 9.58579 9.58579C9.21071 9.96086 9 10.4696 9 11V19C9 19.5304 9.21071 20.0391 9.58579 20.4142C9.96086 20.7893 10.4696 21 11 21H19C19.5304 21 20.0391 20.7893 20.4142 20.4142C20.7893 20.0391 21 19.5304 21 19V11C21 10.4696 20.7893 9.96086 20.4142 9.58579C20.0391 9.21071 19.5304 9 19 9V9ZM20 19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H11C10.7348 20 10.4804 19.8946 10.2929 19.7071C10.1054 19.5196 10 19.2652 10 19V11C10 10.7348 10.1054 10.4804 10.2929 10.2929C10.4804 10.1054 10.7348 10 11 10H19C19.2652 10 19.5196 10.1054 19.7071 10.2929C19.8946 10.4804 20 10.7348 20 11V19Z"
+                                                fill="white" />
+                                            <path
+                                                d="M15 12C14.4066 12 13.8266 12.1759 13.3333 12.5056C12.8399 12.8352 12.4554 13.3038 12.2283 13.8519C12.0013 14.4001 11.9419 15.0033 12.0576 15.5853C12.1734 16.1672 12.4591 16.7018 12.8787 17.1213C13.2982 17.5409 13.8328 17.8266 14.4147 17.9424C14.9966 18.0581 15.5998 17.9987 16.148 17.7716C16.6962 17.5446 17.1647 17.1601 17.4944 16.6667C17.824 16.1734 18 15.5933 18 15C18 14.2044 17.6839 13.4413 17.1213 12.8787C16.5587 12.3161 15.7956 12 15 12ZM15 17C14.6044 17 14.2177 16.8827 13.8888 16.6629C13.5599 16.4432 13.3036 16.1308 13.1522 15.7654C13.0008 15.3999 12.9612 14.9978 13.0384 14.6098C13.1156 14.2219 13.3061 13.8655 13.5858 13.5858C13.8655 13.3061 14.2218 13.1156 14.6098 13.0384C14.9978 12.9613 15.3999 13.0009 15.7653 13.1522C16.1308 13.3036 16.4431 13.56 16.6629 13.8889C16.8827 14.2178 17 14.6044 17 15C17 15.5304 16.7893 16.0391 16.4142 16.4142C16.0391 16.7893 15.5304 17 15 17Z"
+                                                fill="white" />
+                                            <path
+                                                d="M18.25 12.5C18.6642 12.5 19 12.1642 19 11.75C19 11.3358 18.6642 11 18.25 11C17.8358 11 17.5 11.3358 17.5 11.75C17.5 12.1642 17.8358 12.5 18.25 12.5Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_147">
+                                                <rect width="12" height="12" fill="white" transform="translate(9 9)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#">
+                                    <svg width="30" height="30" viewbox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="30" height="30" rx="15" fill="#FE753F" />
+                                        <g clip-path="url(#clip0_1_136)">
+                                            <path
+                                                d="M22 10.6591C21.4794 10.8875 20.9246 11.0389 20.3462 11.1124C20.9412 10.7571 21.3954 10.1989 21.6089 9.526C21.0541 9.85675 20.4416 10.0904 19.7889 10.2208C19.2621 9.65988 18.5114 9.3125 17.6924 9.3125C16.1034 9.3125 14.8241 10.6023 14.8241 12.1834C14.8241 12.4109 14.8434 12.6296 14.8906 12.8379C12.5045 12.7215 10.3931 11.5779 8.97475 9.83575C8.72712 10.2654 8.58188 10.7571 8.58188 11.2865C8.58188 12.2805 9.09375 13.1616 9.85675 13.6718C9.39562 13.663 8.94325 13.5291 8.56 13.3183C8.56 13.327 8.56 13.3384 8.56 13.3498C8.56 14.7445 9.55487 15.903 10.8595 16.1699C10.6259 16.2337 10.3712 16.2644 10.107 16.2644C9.92325 16.2644 9.73775 16.2539 9.56362 16.2154C9.9355 17.352 10.9908 18.1876 12.2455 18.2148C11.269 18.9786 10.0291 19.4389 8.68688 19.4389C8.4515 19.4389 8.22575 19.4284 8 19.3995C9.27137 20.2194 10.7781 20.6875 12.403 20.6875C17.6845 20.6875 20.572 16.3125 20.572 12.5202C20.572 12.3934 20.5676 12.2709 20.5615 12.1493C21.1311 11.745 21.6097 11.2401 22 10.6591Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_136">
+                                                <rect width="14" height="14" fill="white" transform="translate(8 8)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="30" height="30" rx="15" fill="#FE753F" />
+                                        <path
+                                            d="M19.6308 10H10.3692C9.74087 10 9.13825 10.2575 8.69393 10.716C8.24961 11.1744 8 11.7961 8 12.4444V17.5556C8 18.2039 8.24961 18.8256 8.69393 19.284C9.13825 19.7425 9.74087 20 10.3692 20H19.6308C20.2591 20 20.8618 19.7425 21.3061 19.284C21.7504 18.8256 22 18.2039 22 17.5556V12.4444C22 11.7961 21.7504 11.1744 21.3061 10.716C20.8618 10.2575 20.2591 10 19.6308 10ZM17.7418 15.0978L13.5418 17.32C13.5255 17.3287 13.5072 17.333 13.4888 17.3324C13.4704 17.3318 13.4525 17.3263 13.4367 17.3165C13.4209 17.3067 13.4079 17.2929 13.3987 17.2764C13.3896 17.2599 13.3848 17.2412 13.3846 17.2222V12.7778C13.3848 12.7588 13.3896 12.7401 13.3987 12.7236C13.4079 12.7071 13.4209 12.6933 13.4367 12.6835C13.4525 12.6737 13.4704 12.6682 13.4888 12.6676C13.5072 12.667 13.5255 12.6713 13.5418 12.68L17.7418 14.9022C17.7595 14.9115 17.7743 14.9257 17.7846 14.9432C17.795 14.9606 17.8004 14.9807 17.8004 15.0011C17.8004 15.0216 17.795 15.0416 17.7846 15.0591C17.7743 15.0765 17.7595 15.0907 17.7418 15.1V15.0978Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="30" height="30" rx="15" fill="#FE753F" />
+                                        <path
+                                            d="M20.995 21.3687V21.3681H20.998V16.8319C20.998 14.6128 20.5346 12.9033 18.018 12.9033C16.8082 12.9033 15.9964 13.5877 15.6649 14.2366H15.6299V13.1105H13.2438V21.3681H15.7284V17.2793C15.7284 16.2027 15.9264 15.1616 17.2197 15.1616C18.494 15.1616 18.513 16.3903 18.513 17.3483V21.3687H20.995Z"
+                                            fill="white" />
+                                        <path d="M9.19861 13.1113H11.6862V21.3687H9.19861V13.1113Z" fill="white" />
+                                        <path
+                                            d="M10.4408 9C9.64539 9 9 9.66542 9 10.4855C9 11.3055 9.64539 11.9849 10.4408 11.9849C11.2361 11.9849 11.8815 11.3055 11.8815 10.4855C11.881 9.66542 11.2356 9 10.4408 9V9Z"
+                                            fill="white" />
+                                    </svg>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="footer__items">
+                        About
+                        <li class="footer__line">
+                            <a href="#">Company</a>
+                        </li>
+                        <li class="footer__line">
+                            <a href="#">Team</a>
+                        </li>
+                        <li class="footer__line">
+                            <a href="#">Career</a>
+                        </li>
+                        <li class="footer__line">
+                            <a href="#">Blogs</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__items">
+                        Products
+                        <li class="footer__line">
+                            <a href="#">E-Books</a>
+                        </li>
+                        <li class="footer__line">
+                            <a href="#">Preasantation</a>
+                        </li>
+                        <li class="footer__line">
+                            <a href="#">Management</a>
+                        </li>
+                        <li class="footer__line">
+                            <a href="#">Dashboard</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__items">
+                        Address
+                        <li class="footer__line">
+                            Country Delevery
+                        </li>
+                        <li class="footer__line">
+                            Counter Beach Post
+                        </li>
+                        <li class="footer__line">
+                            <a href="www.itobd.com">www.itobd.com</a>
+                        </li>
+                        <li class="footer__line">
+                            <a href="tel:+880176565655">+880176565655</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </footer>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>

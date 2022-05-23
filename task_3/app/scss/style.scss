@@ -301,10 +301,10 @@
     text-align: center;
     padding: 70px 0;
     background: #F9F9F9;
-    padding-left: 5px;
 
     &__title {
         margin-bottom: 10px;
+        padding-left: 5px;
 
     }
 
@@ -350,7 +350,7 @@
         opacity: 0.7;
         max-width: 350px;
         font-size: 16px;
-line-height: 24px;
+        line-height: 24px;
     }
 
     &__inner {
@@ -363,5 +363,210 @@ line-height: 24px;
         max-width: 362px;
         height: 100%;
         border-radius: 10px;
+    }
+}
+
+.reviews {
+    padding: 140px 0 110px;
+    text-align: center;
+
+    &__span {
+        display: block;
+        color: $orange;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        margin-bottom: 70px;
+        padding-left: 5px;
+    }
+
+    &__slide {
+        border: 2px solid rgba(254, 117, 63, 0.1);
+        border-radius: 10px;
+        padding: 30px 40px 30px 30px;
+        text-align: left;
+        max-width: 558px;
+        width: 100%;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-image: url(../images/reviews/quote.svg);
+            width: 64px;
+            height: 64px;
+            right: -10px;
+            top: 0;
+        }
+    }
+
+    &__img {
+        width: 74px;
+        height: 100%;
+        margin-right: 30px;
+    }
+
+    &__head {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    &__job {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        opacity: 0.7;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        opacity: 0.7;
+    }
+}
+
+.tns-nav {
+    margin-top: 40px;
+
+    & button {
+        width: 12px;
+        height: 12px;
+        background: #EDEDED;
+        border-radius: 50%;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+}
+
+.tns-nav-active {
+    background-color: $blue !important;
+}
+
+.form {
+    text-align: center;
+    padding-bottom: 70px;
+
+    &__content {
+        padding: 70px 0;
+        margin: 0 auto;
+        background: #433E89;
+        border-radius: 10px;
+    }
+
+    &__title {
+        color: $white;
+        margin-bottom: 15px;
+
+        &::after {
+            all: unset;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        opacity: 0.7;
+        max-width: 635px;
+        margin: 0 auto;
+        margin-bottom: 70px;
+    }
+
+    &__input {
+        max-width: 743px;
+        width: 100%;
+        height: 70px;
+        background: $white;
+        border-radius: 10px;
+        padding: 7px 7px 7px 30px;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            opacity: 0.5;
+        }
+    }
+
+    &__label {
+        position: relative;
+    }
+
+    &__btn {
+        position: absolute;
+        right: 7px;
+        top: -16px;
+    }
+
+}
+
+.footer {
+    padding: 70px 0 190px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        max-width: 220px;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        opacity: 0.7;
+        margin-bottom: 25px;
+        max-width: 265px;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    &__items {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    &__line {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 17px;
+        text-transform: capitalize;
+        opacity: 0.7;
+        &:first-child {
+            margin-top: 25px;
+        }
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
     }
 }
