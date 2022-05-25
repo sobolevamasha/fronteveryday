@@ -87,7 +87,7 @@ var partners = {
 
 var out = '';
 for (var key in partners) {
-    out += '<li class="partners__item"><img src="' + partners[key].img + '" alt="' + partners[key].alt + '"></li>'
+    out += '<li class="partners__item"><img class="partners__img" src="' + partners[key].img + '" alt="' + partners[key].alt + '"></li>'
 }
 document.getElementById('out').innerHTML = out;
 
