@@ -19,8 +19,18 @@
                 <a href="#" class="logo">
                     <img src="./images/logo.png" alt="logo" width="250">
                 </a>
-                <nav class="header__menu">
-                    <ul class="header__menu-list">
+                <nav class="header__menu" >
+                    <div class="header__menu--icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="header__menu--bars" id="contain">
+                        <div class="header__menu--bar1"></div>
+                        <div class="header__menu--bar2"></div>
+                        <div class="header__menu--bar3"></div>
+                    </div>
+                    <ul class="header__menu-list" id="nav">
                         <li class="header__menu-item">
                             <a href="#">Home</a>
                         </li>
@@ -33,8 +43,9 @@
                         <li class="header__menu-item">
                             <a href="#">Blog</a>
                         </li>
+                        <button class="btn">Contact us</button>
                     </ul>
-                    <button class="btn">Contact us</button>
+
                 </nav>
             </div>
         </div>
@@ -63,6 +74,38 @@
                                         <button class="tabs__pane-btn">Location</button>
                                         <select class="tabs__pane-select" name="Location">
                                             <option>Tbilisi</option>
+                                            <option>Belgrade</option>
+                                            <option>Erevan</option>
+                                            <option>Istanbul</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button class="tabs__pane-btn">Property type</button>
+                                        <select class="tabs__pane-select" name="Property type">
+                                            <option>Duplex</option>
+                                            <option>Bungalo</option>
+                                            <option>Room</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button class="tabs__pane-btn">Price</button>
+                                        <select class="tabs__pane-select" name="Price">
+                                            <option>$1000-$2000</option>
+                                            <option>$2000-$4000</option>
+                                            <option selected>$4000-$8000</option>
+                                            <option>$8000-$10000</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn">Search</button>
+                                </div>
+                                <div class="tabs__pane">
+                                    <div>
+                                        <button class="tabs__pane-btn">Location</button>
+                                        <select class="tabs__pane-select" name="Location">
+                                            <option>Belgrade</option>
+                                            <option>Erevan</option>
+                                            <option>Istanbul</option>
+                                            <option>Tbilisi</option>
                                         </select>
                                     </div>
                                     <div>
@@ -74,16 +117,41 @@
                                     <div>
                                         <button class="tabs__pane-btn">Price</button>
                                         <select class="tabs__pane-select" name="Price">
+                                            <option>$1000-$2000</option>
+                                            <option>$2000-$4000</option>
                                             <option>$4000-$8000</option>
+                                            <option>$8000-$10000</option>
                                         </select>
                                     </div>
                                     <button class="btn">Search</button>
                                 </div>
-                                <div class="tabs__pane">
-                                    Содержимое 2...
-                                </div>
                                 <div class="tabs__pane" id="content-3">
-                                    Содержимое 3...
+                                    <div>
+                                        <button class="tabs__pane-btn">Location</button>
+                                        <select class="tabs__pane-select" name="Location">
+                                            <option>Istanbul</option>
+                                            <option>Belgrade</option>
+                                            <option>Erevan</option>
+                                            <option>Tbilisi</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button class="tabs__pane-btn">Property type</button>
+                                        <select class="tabs__pane-select" name="Property type">
+                                            <option>Condo</option>
+                                            <option>Apartment</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button class="tabs__pane-btn">Price</button>
+                                        <select class="tabs__pane-select" name="Price">
+                                            <option>$1000-$2000</option>
+                                            <option>$2000-$4000</option>
+                                            <option>$4000-$8000</option>
+                                            <option>$8000-$10000</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn">Search</button>
                                 </div>
                             </div>
                         </div>

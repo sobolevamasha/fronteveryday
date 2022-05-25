@@ -87,7 +87,7 @@ var partners = {
 
 var out = '';
 for (var key in partners) {
-    out += '<li><img src="' + partners[key].img + '" alt="' + partners[key].alt + '"></li>'
+    out += '<li class="partners__item"><img src="' + partners[key].img + '" alt="' + partners[key].alt + '"></li>'
 }
 document.getElementById('out').innerHTML = out;
 
@@ -227,7 +227,7 @@ document.getElementById('features__list2').innerHTML = featuresList2;
 
 var slider = tns({
     container: '.my-slider',
-    items: 2,
+    items: 1,
     controls: false,
     navPosition: "bottom",
     //nav: true,
@@ -237,6 +237,28 @@ var slider = tns({
 
 
     responsive: {
-
+        1200: {
+            items: 2
+        },
+        900: {
+            items: 1
+        },
+        500: {
+            items: 1
+        }
     }
 });
+
+
+/*MENU*/
+
+var x = document.getElementById("contain");
+
+x.addEventListener("click", myFunction);
+
+function myFunction() {
+    var element = document.getElementById("nav");
+    element.classList.toggle("open");
+
+    x.classList.toggle("change");
+}
