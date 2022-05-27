@@ -122,6 +122,8 @@
         text-align: center;
         flex-shrink: 0;
         cursor: pointer;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
 
     &__btn_active {
@@ -235,7 +237,6 @@
     }
 }
 
-
 .popular {
     padding: 140px 0;
 
@@ -258,7 +259,7 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @include _500 {
+        @include _600 {
             grid-template-columns: repeat(1, 1fr);
         }
     }
@@ -270,6 +271,13 @@
 
     &__content {
         padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        @include _1030 {
+            padding: 25px;
+        }
     }
 
     &__location {
@@ -300,11 +308,13 @@
     }
 
     &__item {
-        display: inline-block;
         max-width: 362px;
         width: 100%;
         box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.07);
         border-radius: 10px;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
     }
 
     &__top {
@@ -382,13 +392,17 @@
 
     &__btn {
         padding: 10px 20px;
+        @include _1030 {
+            font-size: 14px;
+            line-height: 100%;
+            padding: 10px 15px;
+        }
 
         @include _900 {
-            padding: 10px;
+           // padding: 10px;
         }
     }
 }
-
 
 .features {
     text-align: center;
@@ -419,7 +433,7 @@
             margin: 15px;
         }
 
-        @include _500 {
+        @include _600 {
             margin: 15px 0;
         }
 
@@ -636,7 +650,7 @@
         right: 7px;
         top: -16px;
 
-        @include _500 {
+        @include _600 {
             position: relative;
             margin: 0 auto;
             top: 0;

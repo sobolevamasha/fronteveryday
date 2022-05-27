@@ -505,6 +505,8 @@ a:hover {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .tabs__btn_active {
   color: #FE753F;
@@ -649,7 +651,7 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .popular__items {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -661,6 +663,22 @@ a:hover {
 }
 .popular__content {
   padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+@media (max-width: 1030px) {
+  .popular__content {
+    padding: 25px;
+  }
 }
 .popular__location {
   font-weight: 400;
@@ -687,12 +705,21 @@ a:hover {
   width: 100%;
 }
 .popular__item {
-  display: inline-block;
   max-width: 362px;
   width: 100%;
   -webkit-box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.07);
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .popular__top {
   display: -webkit-box;
@@ -769,12 +796,13 @@ a:hover {
 .popular__btn {
   padding: 10px 20px;
 }
-@media (max-width: 900px) {
+@media (max-width: 1030px) {
   .popular__btn {
-    padding: 10px;
+    font-size: 14px;
+    line-height: 100%;
+    padding: 10px 15px;
   }
 }
-
 .features {
   text-align: center;
   padding: 70px 0;
@@ -802,7 +830,7 @@ a:hover {
     margin: 15px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .features__content {
     margin: 15px 0;
   }
@@ -1036,7 +1064,7 @@ a:hover {
   right: 7px;
   top: -16px;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .form__btn {
     position: relative;
     margin: 0 auto;
