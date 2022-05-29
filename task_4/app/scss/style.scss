@@ -1,0 +1,44 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'media';
+
+.header {
+    padding: 50px 0 43px;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -50px;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu-list {
+        display: flex;
+    }
+
+    &__menu-item {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__search {
+        margin-right: 20px;
+    }
+
+    &__cart {
+        margin-right: 32px;
+    }
+}

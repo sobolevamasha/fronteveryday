@@ -1,0 +1,24 @@
+@import 'media';
+
+*,
+html {
+    box-sizing: border-box;
+}
+
+body {}
+
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.btn {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding: 10px 23px;
+    background: #09A66D;
+    border-radius: 8px;
+}
