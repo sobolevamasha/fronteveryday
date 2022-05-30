@@ -5,7 +5,13 @@ html {
     box-sizing: border-box;
 }
 
-body {}
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $black;
+}
 
 .container {
     max-width: 1260px;
@@ -19,6 +25,33 @@ body {}
     line-height: 20px;
     color: #FFFFFF;
     padding: 10px 23px;
-    background: #09A66D;
+    background: $green;
     border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.title {
+    font-family: $rosario;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 90px;
+    color: $black;
+}
+
+p {
+    color: #555555;
+}
+
+a, button, svg, svg path, span {
+    &:hover,
+    &:focus,
+    &:active {
+        transition: all 0.2s ease;
+    }
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: $green;
 }
