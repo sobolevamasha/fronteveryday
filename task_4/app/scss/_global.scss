@@ -36,13 +36,19 @@ body {
     font-size: 70px;
     line-height: 90px;
     color: $black;
+    margin-bottom: 20px;
 }
 
 p {
     color: #555555;
 }
 
-a, button, svg, svg path, span {
+a,
+button,
+svg,
+svg path,
+span {
+
     &:hover,
     &:focus,
     &:active {
@@ -55,3 +61,100 @@ a:focus,
 a:active {
     color: $green;
 }
+
+.btn-arrow {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+        color: $green;
+
+        .first__arrow {
+            background-color: $green-lite;
+            border: 1px solid $green;
+
+            & svg path {
+                fill: $green;
+            }
+        }
+    }
+}
+
+.arrow {
+    background-color: $green;
+    border-radius: 50%;
+    padding: 25px 16px;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    border: 1px solid transparent;
+}
+
+.rating {
+    display: flex;
+    z-index: 14;
+    position: relative;
+    max-width: 130px;
+}
+
+.rating-item {
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.rating-item.active {
+    background-image: url(../images/star-gold.svg);
+    z-index: 14;
+    position: relative;
+}
+
+.tns-nav {
+    display: none;
+}
+
+
+.tns-controls {
+    display: flex;
+    justify-content: center;
+    margin: -50px 0 0 -70px;
+    position: relative;
+    z-index: 12;
+
+    & [data-controls="prev"],
+    & [data-controls="next"] {
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-position: center center;
+        background-image: url(../images/next.svg);
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        border: 1px solid #CCCCCC;
+
+        &:hover,
+        &:active {
+            background-color: $green;
+            border: 1px solid $green-lite;
+            background-image: url(../images/next-white.svg);
+
+        }
+    }
+
+    & [data-controls="next"] {
+        margin-left: 25px;
+        background-image: url(../images/next.svg);
+        transform: rotate(183deg);
+    }
+
+
+}
+
+
