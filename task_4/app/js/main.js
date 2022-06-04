@@ -149,6 +149,9 @@ x.addEventListener("click", myFunction);
 function myFunction() {
     var element = document.getElementById("nav");
     element.classList.toggle("open");
+    var body = document.getElementsByTagName('body')[0];
+    body.classList.toggle("overflow");
+
 
     x.classList.toggle("change");
 }

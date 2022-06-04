@@ -7,9 +7,19 @@
 .header {
     padding: 50px 0 43px;
 
+    @include _1200 {
+        padding: 30px 0;
+    }
+    @include _600 {
+        padding: 20px 0;
+    }
+
     &__logo {
         display: table;
-        margin: 0 auto -50px;
+        margin: 0 auto -65px;
+        @include _600 {
+            margin: 0 0 -65px auto;
+        }
     }
 
     &__menu {
@@ -18,19 +28,122 @@
         align-items: center;
     }
 
-    &__menu-list {
-        display: flex;
+    &__menu--icon {
+        display: none;
+
+        @include _1200 {
+            display: block;
+            height: 40px;
+            padding: 0;
+            margin-bottom: 10px;
+            background: aquamarine;
+        }
     }
 
+    &__menu--bars {
+        display: none;
+
+        @include _1200 {
+            display: inline-block;
+            cursor: pointer;
+            position: absolute;
+            z-index: 12;
+        }
+    }
+
+    &__menu--bar1,
+    &__menu--bar2,
+    &__menu--bar3 {
+        @include _1200 {
+            width: 33px;
+            height: 2px;
+            background-color: $black;
+            margin: 9px 0;
+            transition: 0.2s;
+        }
+    }
+
+    &__menu-list {
+        display: flex;
+        @include _1200 {
+            flex-direction: column;
+            overflow: hidden;
+            background: #FFFFFF;
+            height: 0;
+            max-height: 0px;
+            list-style-type: none;
+            padding-left: 0;
+            //transition: linear 1s;
+        }
+
+        &.open {
+            @include _1200 {
+                height: 100vh;
+                max-height: 100vh;
+                transition: linear 1s;
+                position: absolute;
+                width: 40%;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                padding-top: 15px;
+            }
+            @include _600 {
+                width: 75%;
+                padding-bottom: 40px;
+            }
+        }
+    }
     &__menu-item {
         &:not(:last-child) {
             margin-right: 40px;
+        }
+        @include _1200 {
+            float: none;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            margin: 0;
+            -webkit-transition: linear 1s;
+            transition: linear 1s;
+            //margin: 20px 0;
+            margin-right: 0 !important;
+        }
+        
+    }
+
+    &__menu-link {
+        @include _1200 {
+        text-decoration: none;
+        color: $black;
+        padding: 15px;
+        border-bottom: 1px solid white;
+        display: block;
+        margin: 0;
+        -webkit-transition: linear 1s;
+        transition: linear 1s;
+        font-size: 17px;
+
+        &:hover {
+            background-color: $green-lite;
+            border-bottom: none;
+        }
+    }
+    }
+
+    &__right-mobile {
+        display: none;
+        @include _600 {
+            display: block;
         }
     }
 
     &__right {
         display: flex;
         align-items: center;
+        @include _600 {
+            display: none;
+        }
     }
 
     &__search {
@@ -40,6 +153,9 @@
         border-radius: 50%;
         padding: 8px;
         border: 1px solid transparent;
+        @include _600 {
+            margin: 20px auto 20px;
+        }
     }
 
     &__cart {
@@ -49,6 +165,9 @@
         border-radius: 50%;
         padding: 8px;
         border: 1px solid transparent;
+        @include _600 {
+            margin: 0 auto 20px;
+        }
     }
 
     &__search:hover,
@@ -62,6 +181,10 @@
             color: $green;
             background-color: $green-lite;
             border: 1px solid $green;
+        }
+        @include _600 {
+            display: block;
+            margin: 0 auto;
         }
     }
 
@@ -87,6 +210,9 @@
         align-items: end;
         display: flex;
         flex-direction: column;
+        @include _600 {
+            align-items: center;
+        }
     }
 
     &__item {
@@ -136,6 +262,13 @@
         max-width: 862.18px;
         width: 100%;
         bottom: 20px;
+        z-index: -1;
+        @include _900 {
+            max-width: 600px;
+        }
+        @include _600 {
+            display: none;
+        }
     }
 
     &__parallax {
@@ -159,6 +292,10 @@
 
 .why {
     padding: 140px 0 145px;
+    @include _1200 {
+        text-align: center;
+        padding: 80px 0;
+    }
 
     &__title {
         margin-bottom: 20px;
@@ -167,6 +304,9 @@
     &__text {
         max-width: 640px;
         margin-bottom: 20px;
+        @include _1200 {
+            margin: 0 auto 30px;
+        }
     }
 
     &__item {
@@ -181,6 +321,12 @@
         &:nth-child(2) {
             background-color: $green-lite;
         }
+
+        @include _600 {
+            max-height: unset;
+            flex-direction: column;
+            padding: 20px 30px;
+        }
     }
 
     &__img {
@@ -192,6 +338,11 @@
 
         &--white {
             background-color: $white !important;
+        }
+
+        @include _600 {
+            margin-right: 0;
+            margin-bottom: 20px;
         }
     }
 
@@ -212,6 +363,9 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
+        @include _1200 {
+            justify-content: center;
+        }
     }
 
     &__man {
@@ -219,6 +373,9 @@
         position: absolute;
         right: 0;
         top: -100px;
+        @include _1200 {
+            display: none;
+        }
     }
 
     &__arrow {
@@ -230,10 +387,17 @@
 .explore {
     padding: 90px 0 140px;
     background-color: $green-lite;
+    @include _1200 {
+        padding: 80px 0;
+    }
 
     &__inner {
         display: flex;
         justify-content: center;
+        @include _1200 {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__img {
@@ -241,6 +405,9 @@
         height: 100%;
         width: 100%;
         margin-right: 50px;
+        @include _1200 {
+            margin: 0 auto 30px;
+        }
     }
 
     &__title {
@@ -253,6 +420,9 @@
 
     &__btn {
         margin: unset;
+        @include _1200 {
+            margin: 0 auto;
+        }
     }
 
     &__content {
@@ -266,29 +436,46 @@
         right: 0;
         bottom: -130px;
         object-fit: cover;
+        @include _1200 {
+            display: none;
+        }
     }
 }
 
 .reviews {
     padding: 90px 0 70px;
+    @include _1200 {
+        padding: 80px 0;
+        text-align: center;
+    }
 
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        @include _1200 {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
 
     &__title {
         max-width: 640px;
         position: absolute;
         //margin-bottom: 30px;
+        @include _1200 {
+            position: unset;
+            margin: 0 auto 30px;
+        }
     }
 
     &__img {
         max-width: 500px;
         width: 100%;
-        //height: 100%;
-        //margin-top: -200px;
+
+        @include _600 {
+            max-width: 200px;
+        }
     }
 
     &__circle {
@@ -304,6 +491,10 @@
             background-size: cover;
             bottom: 10px;
             left: 0;
+        }
+
+        @include _600 {
+            margin-bottom: 40px;
         }
     }
 
@@ -321,16 +512,29 @@
 
 .app {
     padding: 70px 0 140px;
+    @include _600 {
+        padding: 40px 0;
+    }
 
     &__wrap {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include _600 {
+            text-align: center;
+        }
     }
 
     &__img {
         max-width: 265px;
         margin-right: 115px;
+        @include _1200 {
+            margin-right: 70px;
+            max-width: 200px;
+        }
+        @include _600 {
+            display: none;
+        }
     }
 
     &__title {
@@ -354,6 +558,9 @@
 
     &__links {
         display: flex;
+        @include _600 {
+            justify-content: center;
+        }
     }
 
     &__item {
@@ -366,11 +573,30 @@
 .footer {
     padding: 66px 0 120px;
     background-color: #FCFEFD;
+    @include _600 {
+        padding: 40px 0 60px;
+    }
 
     &__wrap {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
+        @include _1200 {
+            display: unset;
+        }
+    }
+
+    &__items-wrap {
+        display: none; 
+        @include _1200 {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        @include _600 {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__logo {
@@ -380,6 +606,9 @@
 
     &__text {
         width: 360px;
+        @include _1200 {
+            width: unset;
+        } 
     }
 
     &__items {
@@ -387,6 +616,11 @@
         font-size: 24px;
         line-height: 31px;
         margin-top: 30px;
+        &--dek {
+            @include _1200 {
+                display: none;
+            }
+        }
     }
 
     &__line {
@@ -394,6 +628,7 @@
         font-size: 18px;
         line-height: 23px;
         color: #555555;
+
         &:not(:last-child) {
             margin-bottom: 25px;
         }
@@ -405,11 +640,20 @@
 
     &__links {
         display: flex;
+        @include _600 {
+            justify-content: center;
+        }
     }
 
     &__link {
         &:not(:last-child) {
             margin-right: 50px;
+        }
+    }
+
+    &__col {
+        @include _1200 {
+            text-align: center;
         }
     }
 }
