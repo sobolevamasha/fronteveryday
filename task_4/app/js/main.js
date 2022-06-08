@@ -41,7 +41,7 @@ window.onload = function () {
 }
 
 const counters = document.querySelectorAll('.first__count');
-const speed = 400;
+const speed = 200;
 
 counters.forEach(counter => {
     const updateCount = () => {
@@ -52,7 +52,7 @@ counters.forEach(counter => {
 
         if (count < target) {
             counter.innerText = Math.ceil(count + inc);
-            setTimeout(updateCount, 1);
+            setTimeout(updateCount, 100);
         } else {
             count.innerText = target;
         }
@@ -79,7 +79,7 @@ var slider = tns({
     }
 });
 
-var rating = document.querySelector('.rating'),
+var rating = document.querySelectorAll('.rating'),
     ratingItem = document.querySelectorAll('.rating-item');
 
 rating.onclick = function (e) {

@@ -206,11 +206,16 @@ a:active {
   background-image: url(../images/star.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  cursor: pointer;
 }
 
 .rating-item.active {
   background-image: url(../images/star-gold.svg);
+  z-index: 14;
+  position: relative;
+}
+
+.rating-item.active-half {
+  background-image: url(../images/Iconly/half.svg);
   z-index: 14;
   position: relative;
 }
