@@ -79,7 +79,7 @@ var slider = tns({
     }
 });
 
-var rating = document.querySelectorAll('.rating'),
+/*var rating = document.querySelectorAll('.rating'),
     ratingItem = document.querySelectorAll('.rating-item');
 
 rating.onclick = function (e) {
@@ -137,7 +137,7 @@ function mouseOutActiveClas(arr) {
             arr[i].classList.remove('active');
         }
     }
-}
+}*/
 
 
 /*MENU*/
