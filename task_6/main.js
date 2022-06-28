@@ -1,0 +1,1 @@
+let procent = 20;
