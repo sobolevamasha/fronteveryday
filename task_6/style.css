@@ -79,7 +79,7 @@ body::after {
     height: 32px;
     background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
     border-radius: 16px;
-    padding: 4px;
+    transition: all 0.4s ease-in;
 }
 
 .main__spot {
@@ -88,6 +88,33 @@ body::after {
     height: 24px;
     border-radius: 50%;
     margin-left: auto;
+    transition: all 0.4s ease-in;
+}
+
+.main__toggle.discount {
+    position: relative;
+    background: none;
+}
+
+.main__toggle.discount::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background:linear-gradient(45deg,#A2A7F0,#696EDD); 
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.discount .main__spot {
+    margin-left: 0;
+    margin-right: auto;
+    background: linear-gradient(135.06deg, #A2A7F0 -0.05%, #696EDD 100.05%);
+    transition: all 0.4s ease-in;
 }
 
 .tariff__list {
@@ -140,7 +167,7 @@ body::after {
     font-size: 40px;
     line-height: 49px;
     top: 10px;
-    left: 32px;
+    left: 20px;
     text-align: center;
     letter-spacing: -1.2px;
 }
