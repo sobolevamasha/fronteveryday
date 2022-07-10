@@ -1,0 +1,39 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+
+@import 'media';
+
+body {
+    background-image: url(../images/day.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.main {
+    padding-top: 55px;
+
+    &__quote-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 573px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    &__quote {
+        margin-right: 15px;
+    }
+
+    &__author {
+        display: block;
+    }
+}
