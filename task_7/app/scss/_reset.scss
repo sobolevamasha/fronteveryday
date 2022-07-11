@@ -45,7 +45,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+    //font: inherit;
     padding: 0;
 }
 
@@ -57,4 +57,6 @@ a {
 button {
     background-color: unset;
     border: none;
+    cursor: pointer;
+    color: inherit;
 }

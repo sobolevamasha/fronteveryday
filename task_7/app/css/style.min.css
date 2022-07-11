@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -48,7 +48,6 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
   padding: 0;
 }
 
@@ -60,6 +59,8 @@ a {
 button {
   background-color: unset;
   border: none;
+  cursor: pointer;
+  color: inherit;
 }
 
 *,
@@ -78,9 +79,11 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+.container.half-sized {
+  height: 50%;
+}
 
 body {
-  background-image: url(../images/day.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -88,9 +91,33 @@ body {
   color: #FFFFFF;
   font-weight: 400;
 }
+body.day {
+  background-image: url(../images/day.jpg);
+}
+body.night {
+  background-image: url(../images/night.jpg);
+}
 
 .main {
-  padding-top: 55px;
+  height: 100%;
+}
+.main__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  padding: 55px 0 100px;
+}
+.main__wrap.sized {
+  height: 100%;
+  padding: 55px 0;
 }
 .main__quote-wrap {
   display: -webkit-box;
@@ -108,8 +135,145 @@ body {
   line-height: 28px;
 }
 .main__quote {
-  margin-right: 15px;
+  margin: 0 15px 15px 0;
 }
 .main__author {
   display: block;
+  font-weight: 700;
+}
+.main__new-quote {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main__new-quote.clicked {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.main__time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.main__time span {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 90px;
+  margin-left: 20px;
+}
+.main__clock {
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 200px;
+  letter-spacing: -5px;
+}
+.main__greeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main__greeting-text {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+.main__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main__btn {
+  padding: 8px 9px 8px 21px;
+  background: #FFFFFF;
+  border-radius: 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #000000;
+  mix-blend-mode: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main__btn span {
+  opacity: 0.5;
+}
+.main__btn div {
+  background-image: url(../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 40px;
+  height: 40px;
+  background-color: #303030;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.add {
+  color: #303030;
+  padding: 74px 0;
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(40.7742px);
+          backdrop-filter: blur(40.7742px);
+  height: 50%;
+  display: none;
+}
+.add.visible {
+  display: block;
+  height: 50%;
+}
+.add.night {
+  background: rgba(0, 0, 0, 0.75);
+  color: #FFFFFF;
+}
+.add__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.add__wrapper {
+  font-size: 56px;
+  line-height: 68px;
+  font-weight: 700;
+  max-width: 423px;
+  width: 100%;
+}
+.add__wrapper span {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 3px;
+}
+.add__line {
+  width: 1px;
+  height: 252px;
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.25;
 }
