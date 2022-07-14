@@ -18,3 +18,7 @@ Task 5 deploy link: https://sobolevamasha.github.io/fronteveryday/task_5/
 Task 6 deploy link: https://sobolevamasha.github.io/fronteveryday/task_6/
 <img width="552" alt="Снимок экрана 2022-07-08 в 22 24 09" src="https://user-images.githubusercontent.com/77979222/178057562-ff77626d-76c4-4b24-acf9-1bf951687345.png">
 
+Task 7 deploy link: https://sobolevamasha.github.io/fronteveryday/task_7/app
+<img width="552" alt="Снимок экрана 2022-07-14 в 22 40 35" src="https://user-images.githubusercontent.com/77979222/179069342-c442b46a-a5a1-4979-a007-01a9eb6036fc.png">
+
+
