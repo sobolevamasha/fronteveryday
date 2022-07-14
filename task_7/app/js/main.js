@@ -38,7 +38,7 @@ window.onload = function () {
             }
         }
 
-        body.style.backgroundImage = 'url(../images/day.jpg)'
+        body.style.backgroundImage = 'url(./images/day.jpg)'
         //body.classList.add('day');
 
 
@@ -78,7 +78,7 @@ window.onload = function () {
                     greetText.innerText = 'Good night'
                 }
                 //body.classList.add('night');
-                body.style.backgroundImage = 'url(../images/night.jpg)'
+                body.style.backgroundImage = 'url(./images/night.jpg)'
                 addBlock.classList.add('night');
             }
         }
