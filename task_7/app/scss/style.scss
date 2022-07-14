@@ -2,8 +2,6 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
-
-
 @import 'media';
 
 body {
@@ -14,14 +12,6 @@ body {
     height: 100vh;
     color: #FFFFFF;
     font-weight: 400;
-
-    &.day {
-        background-image: url(../images/day.jpg);
-    }
-
-    &.night {
-        background-image: url(../images/night.jpg);
-    }
 }
 
 .main {
@@ -37,6 +27,16 @@ body {
         &.sized {
             height: 100%;
             padding: 55px 0;
+
+            @include _900 {
+                padding: 0;
+            }
+
+            & .main__bottom {
+                @include _600 {
+                    height: 75%;
+                }
+            }
         }
     }
 
@@ -77,6 +77,17 @@ body {
             font-size: 40px;
             line-height: 90px;
             margin-left: 20px;
+
+            @include _1200 {
+                font-size: 30px;
+                line-height: 50px;
+            }
+
+            @include _900 {
+                margin-left: 10px;
+                font-size: 15px;
+                line-height: 28px;
+            }
         }
     }
 
@@ -85,6 +96,30 @@ body {
         font-size: 200px;
         line-height: 200px;
         letter-spacing: -5px;
+
+        @include _1200 {
+            font-size: 175px;
+            line-height: 175px;
+        }
+
+        @include _600 {
+            font-size: 100px;
+            line-height: 100px;
+        }
+    }
+
+    &__place {
+        display: none;
+
+        @include _600 {
+            display: block;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 28px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: -35px;
+        }
     }
 
     &__greeting {
@@ -97,6 +132,26 @@ body {
             letter-spacing: 4px;
             text-transform: uppercase;
             margin-left: 15px;
+
+            @include _1200 {
+                font-size: 15px;
+                line-height: 23px;
+            }
+
+            @include _600 {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+
+        &-icon {
+            @include _1200 {
+                width: 15px;
+            }
+        }
+
+        @include _900 {
+            margin-bottom: 15px;
         }
     }
 
@@ -104,6 +159,16 @@ body {
         display: flex;
         align-items: end;
         justify-content: space-between;
+
+        @include _900 {
+            height: 35%;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        @include _900 {
+            height: 55%;
+        }
     }
 
     &__btn {
@@ -119,6 +184,12 @@ body {
         mix-blend-mode: normal;
         display: flex;
         align-items: center;
+        transition: 0.3s ease;
+
+        @include _1200 {
+            //font-size: 13px;
+            //line-height: 25px;
+        }
 
         & span {
             opacity: 0.5;
@@ -133,6 +204,24 @@ body {
             background-color: #303030;
             border-radius: 50%;
             margin-left: 15px;
+            transition: 0.3s ease;
+
+            @include _1200 {
+                //width: 25px;
+                //height: 25px;
+            }
+        }
+
+        &.clicked {
+            & div {
+                transform: rotate(180deg);
+            }
+        }
+
+        &:hover {
+            & div {
+                background-color: #999999;
+            }
         }
     }
 }
@@ -145,9 +234,19 @@ body {
     height: 50%;
     display: none;
 
+    @include _900 {
+        padding: 40px 0;
+    }
+
     &.visible {
         display: block;
         height: 50%;
+
+        @include _900 {
+            height: 40%;
+            display: flex;
+            align-items: center;
+        }
     }
 
     &.night {
@@ -158,7 +257,11 @@ body {
     &__inner {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+
+        //align-items: flex-end;
+        @include _600 {
+            flex-direction: column;
+        }
     }
 
     &__wrapper {
@@ -168,11 +271,53 @@ body {
         max-width: 423px;
         width: 100%;
 
+        &:last-child {
+            margin-left: 80px;
+
+            @include _600 {
+                margin-left: 0;
+            }
+        }
+
+        @include _1200 {
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        @include _600 {
+            max-width: unset;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
         & span {
             font-weight: 400;
             font-size: 15px;
             line-height: 28px;
             letter-spacing: 3px;
+
+            @include _600 {
+                font-size: 10px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+        }
+
+        & li {
+            &:first-child {
+                margin-bottom: 40px;
+
+                @include _600 {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include _600 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 16px;
+            }
         }
     }
 
@@ -182,5 +327,9 @@ body {
         background: #FFFFFF;
         mix-blend-mode: normal;
         opacity: 0.25;
+
+        @include _900 {
+            display: none;
+        }
     }
 }
