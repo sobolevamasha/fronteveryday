@@ -56,7 +56,7 @@ window.onload = function () {
 
 
             } else if (h >= 12 && h <= 15) {
-                greetIcon.src = 'images/moon.svg'
+                greetIcon.src = 'images/sun.svg'
                 greetText.innerText = 'Good day, it`s currently'
                 if ($(window).width() < 600) {
                     greetText.innerText = 'Good day'
