@@ -228,24 +228,21 @@ body {
 
 .add {
     color: #303030;
-    padding: 74px 0;
+    padding: 20px 0;
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(40.7742px);
     height: 50%;
     display: none;
 
-    @include _900 {
-        padding: 40px 0;
-    }
-
     &.visible {
-        display: block;
+        display: flex;
+        align-items: center;
         height: 50%;
 
         @include _900 {
             height: 40%;
-            display: flex;
-            align-items: center;
+            //display: flex;
+            //align-items: center;
         }
     }
 

@@ -352,31 +352,25 @@ body {
 
 .add {
   color: #303030;
-  padding: 74px 0;
+  padding: 20px 0;
   background: rgba(255, 255, 255, 0.75);
   -webkit-backdrop-filter: blur(40.7742px);
           backdrop-filter: blur(40.7742px);
   height: 50%;
   display: none;
 }
-@media (max-width: 900px) {
-  .add {
-    padding: 40px 0;
-  }
-}
 .add.visible {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 50%;
 }
 @media (max-width: 900px) {
   .add.visible {
     height: 40%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 .add.night {
