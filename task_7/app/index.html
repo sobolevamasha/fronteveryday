@@ -39,10 +39,11 @@
                         </div>
                         <div class="main__time">
                             <div class="main__clock"></div>
-                            <span>BST</span>
+                            <span class="main__gmt"></span>
                         </div>
+                        <div class="main__place">in London, UK</div>
                     </div>
-                    <div class="main__place">in London, UK</div>
+
                     <button class="main__btn">
                         <span class="btn-text">more</span>
                         <div></div>
@@ -54,33 +55,33 @@
         <div class="add">
             <div class="container">
                 <div class="add__inner">
-            <ul class="add__wrapper">
-                <li>
-                    <span>Current time zone</span>
-                    <div class="time-zone"></div>
-                </li>
-                <li>
-                    <span>Day of the year</span>
-                    <div class="year-day"></div>
-                </li>
-            </ul>
-            <div class="add__line"></div>
-            <ul class="add__wrapper">
-                <li>
-                    <span>Day of the week</span>
-                    <div class="week-day"></div>
-                </li>
-                <li>
-                    <span>Week number</span>
-                    <div class="week-number"></div>
-                </li>
-            </ul>
+                    <ul class="add__wrapper">
+                        <li>
+                            <span>Current time zone</span>
+                            <div class="time-zone"></div>
+                        </li>
+                        <li>
+                            <span>Day of the year</span>
+                            <div class="year-day"></div>
+                        </li>
+                    </ul>
+                    <div class="add__line"></div>
+                    <ul class="add__wrapper">
+                        <li>
+                            <span>Day of the week</span>
+                            <div class="week-day"></div>
+                        </li>
+                        <li>
+                            <span>Week number</span>
+                            <div class="week-number"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
-            <div style="width:0px;height:0px" id="YMapsID" class="YMaps YMaps-cursor-grab"></div>
     </div>
-    <script charset="utf-8" src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+    <script charset="utf-8" src="//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript">
+    </script>
     <script src="js/main.min.js"></script>
 </body>
 

@@ -19,6 +19,9 @@ body {
         @include _900 {
             height: 60%;
         }
+        @include _320 {
+            height: 55%;
+        }
     }
     @include _1200 {
         max-width: 900px;
@@ -30,7 +33,7 @@ body {
         max-width: 680px;
     }
     @include _600 {
-        padding: 0 26px;
+        padding: 0 12px;
     }
 }
 

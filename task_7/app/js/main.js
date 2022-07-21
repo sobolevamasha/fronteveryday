@@ -16,9 +16,44 @@ quoteBtn.onclick = function () {
 }
 
 const dateDiv = document.querySelector('.main__clock');
+const dateGmt = document.querySelector('.main__gmt');
 const greetText = document.querySelector('.main__greeting-text');
 const greetIcon = document.querySelector('.main__greeting-icon');
 const body = document.getElementById('bg');
+
+function setMorning() {
+    greetIcon.src = 'images/sun.svg'
+    greetText.innerText = 'Good morning, it`s currently'
+    if ($(window).width() < 600) {
+        greetText.innerText = 'Good morning'
+    }
+}
+
+function setDay() {
+    greetIcon.src = 'images/sun.svg'
+    greetText.innerText = 'Good day, it`s currently'
+    if ($(window).width() < 600) {
+        greetText.innerText = 'Good day'
+    }
+}
+
+function setEvening() {
+    greetIcon.src = 'images/moon.svg'
+    greetText.innerText = 'Good evening, it`s currently'
+    if ($(window).width() < 600) {
+        greetText.innerText = 'Good evening'
+    }
+}
+
+function setNight() {
+    greetIcon.src = 'images/moon.svg'
+    greetText.innerText = 'Good night, it`s currently'
+    if ($(window).width() < 600) {
+        greetText.innerText = 'Good night'
+    }
+    body.style.backgroundImage = 'url(./images/night.jpg)'
+    addBlock.classList.add('night');
+}
 
 
 
@@ -28,6 +63,10 @@ window.onload = function () {
         let date = new Date();
         let h = date.getHours();
         let m = date.getMinutes();
+        let gmt = date.toLocaleDateString(undefined, {
+            day: '2-digit',
+            timeZoneName: 'short'
+        }).substring(4);
 
 
         function MakeTwoDigits(m) {
@@ -44,40 +83,21 @@ window.onload = function () {
 
 
         dateDiv.innerHTML = h + ':' + MakeTwoDigits(m);
-        console.log(h, m);
+        //console.log(h, m);
+        dateGmt.innerHTML = gmt;
 
         function setContent() {
             if (h >= 4 && h <= 11) {
-                greetIcon.src = 'images/sun.svg'
-                greetText.innerText = 'Good morning, it`s currently'
-                if ($(window).width() < 600) {
-                    greetText.innerText = 'Good morning'
-                }
-
+                setMorning();
 
             } else if (h >= 12 && h <= 15) {
-                greetIcon.src = 'images/sun.svg'
-                greetText.innerText = 'Good day, it`s currently'
-                if ($(window).width() < 600) {
-                    greetText.innerText = 'Good day'
-                }
+                setDay();
 
             } else if (h >= 16 && h <= 21) {
-                greetIcon.src = 'images/moon.svg'
-                greetText.innerText = 'Good evening, it`s currently'
-                if ($(window).width() < 600) {
-                    greetText.innerText = 'Good evening'
-                }
+                setEvening();
 
             } else {
-                greetIcon.src = 'images/moon.svg'
-                greetText.innerText = 'Good night, it`s currently'
-                if ($(window).width() < 600) {
-                    greetText.innerText = 'Good night'
-                }
-                //body.classList.add('night');
-                body.style.backgroundImage = 'url(./images/night.jpg)'
-                addBlock.classList.add('night');
+                setNight();
             }
         }
         setContent(h, m);
@@ -131,42 +151,18 @@ switchBtn.onclick = function () {
     btnText.innerHTML =
         (btnText.innerHTML === 'less') ? btnText.innerHTML = 'more' : btnText.innerHTML = 'less';
 }
-
 const place = document.querySelector('.main__place');
-// Создание обработчика для события window.onLoad
-YMaps.jQuery(function () {
-    // Создание экземпляра карты и его привязка к созданному контейнеру
-    var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]),
 
-        // Центр карты
-        center,
+ymaps.ready(init);
 
-        // Масштаб
-        zoom = 10;
-
-    // Получение информации о местоположении пользователя
-    if (YMaps.location) {
-        center = new YMaps.GeoPoint(YMaps.location.longitude, YMaps.location.latitude);
-
-        if (YMaps.location.zoom) {
-            zoom = YMaps.location.zoom;
-        }
-
-        map.openBalloon(center, "Место вашего предположительного местоположения:<br/>" +
-            (YMaps.location.country || "") +
-            (YMaps.location.region ? ", " + YMaps.location.region : "") +
-            (YMaps.location.city ? ", " + YMaps.location.city : "")
-        )
+function init() {
+    var geolocation = ymaps.geolocation;
+    if (geolocation) {
+        console.log(ymaps.geolocation.country);
+        console.log(ymaps.geolocation.region);
+        console.log(ymaps.geolocation.city);
+        place.innerHTML = 'in ' + (ymaps.geolocation.city + ", " + ymaps.geolocation.country);
     } else {
-        center = new YMaps.GeoPoint(37.64, 55.76);
+        console.log('Не удалось установить местоположение');
     }
-
-    // Установка для карты ее центра и масштаба
-    map.setCenter(center, zoom);
-
-    console.log(YMaps.location.country);
-    console.log(YMaps.location.region);
-    console.log(YMaps.location.city);
-});
-
-place.innerHTML = (YMaps.location.city + ", " + YMaps.location.country);
+}
