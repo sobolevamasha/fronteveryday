@@ -153,16 +153,16 @@ switchBtn.onclick = function () {
 }
 const place = document.querySelector('.main__place');
 
+
+
 ymaps.ready(init);
 
 function init() {
     var geolocation = ymaps.geolocation;
-    if (geolocation) {
-        console.log(ymaps.geolocation.country);
-        console.log(ymaps.geolocation.region);
-        console.log(ymaps.geolocation.city);
-        place.innerHTML = 'in ' + (ymaps.geolocation.city + ", " + ymaps.geolocation.country);
-    } else {
-        console.log('Не удалось установить местоположение');
-    }
+        
+    console.log(geolocation.country);
+    console.log(geolocation.region);
+    console.log(geolocation.city);
+
+    place.innerHTML = 'in ' + (geolocation.city + ", " + geolocation.country);
 }
