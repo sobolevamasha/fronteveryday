@@ -4,6 +4,7 @@
 @import 'global';
 @import 'media';
 
+
 .title {
     font-size: 32px;
     line-height: 40px;
@@ -70,6 +71,27 @@
         line-height: 132px;
         color: #D7E0FF;
         margin: 0 auto 20px;
+        display: flex;
+        position: relative;
+
+        & .progress {
+            width: 339px;
+            height: 339px;
+            position: absolute;
+                top: 67%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+            &__circle {
+                transition: 0.5s;
+                transform: scale(-1, 1) rotate(270deg);
+                transform-origin: 50% 50%;
+                stroke: #F87070;
+                stroke-dasharray: 50 10;
+                //stroke-dashoffset: 100;
+
+            }
+        }
     }
 
     &__btn {
@@ -78,6 +100,8 @@
         letter-spacing: 15px;
         color: #D7E0FF;
         text-transform: uppercase;
+        position: relative;
+        z-index: 10;
     }
 
     &__modal-btn {

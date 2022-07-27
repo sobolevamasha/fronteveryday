@@ -63,6 +63,12 @@ button {
   cursor: pointer;
 }
 
+*,
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 700;
@@ -155,6 +161,33 @@ body {
   line-height: 132px;
   color: #D7E0FF;
   margin: 0 auto 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.timer__countdown .progress {
+  width: 339px;
+  height: 339px;
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.timer__countdown .progress__circle {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(-1, 1) rotate(270deg);
+      -ms-transform: scale(-1, 1) rotate(270deg);
+          transform: scale(-1, 1) rotate(270deg);
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  stroke: #F87070;
+  stroke-dasharray: 50 10;
 }
 .timer__btn {
   font-size: 16px;
@@ -162,6 +195,8 @@ body {
   letter-spacing: 15px;
   color: #D7E0FF;
   text-transform: uppercase;
+  position: relative;
+  z-index: 10;
 }
 .timer__modal-btn {
   width: 27px;

@@ -13,15 +13,24 @@
     <h1 class="title">pomodoro</h1>
     <main class="timer">
         <div class="timer__switchers">
-            <button class="active">pomodoro</button>
-            <button>short break</button>
-            <button>long break</button>
+            <button data-mode="pomodoro">pomodoro</button>
+            <button data-mode="shortBreak">short break</button>
+            <button data-mode="longBreak">long break</button>
         </div>
         <div class="timer__counter">
             <div class="timer__inner">
-                <div class="timer__countdown">17:59</div>
-                <button class="timer__btn">
-                    pause
+                <div class="timer__countdown">
+                    <div class="mins">25</div>
+                    <div>:</div>
+                    <div class="secs">00</div>
+                    <svg class="progress">
+                        <circle class="progress__circle" value="0" stroke-width="8" fill="transparent" r="160" cx="170"
+                            cy="170" />
+                    </svg>
+                </div>
+
+                <button class="timer__btn" data-action="start">
+                    start
                 </button>
             </div>
         </div>
