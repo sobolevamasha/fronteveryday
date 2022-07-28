@@ -115,7 +115,6 @@ function updateClock() {
     min.textContent = minutes;
     sec.textContent = seconds;
 
-
     const progress = document.querySelector('.progress__circle');
     progress.max = progress.getAttribute('max');
     console.log('max : ', progress.max);
@@ -124,13 +123,13 @@ function updateClock() {
     const circumference = 2 * Math.PI * radius;
 
     progress.style.strokeDasharray = `${circumference} ${circumference}`;
-    progress.style.strokeDashoffset = circumference * (progress.max - remainingTime.total) / (timer[timer.mode] * 60);
+    progress.style.strokeDashoffset = circumference * (progress.max + remainingTime.total) / (timer[timer.mode] * 60);
 
 
     console.log(remainingTime.total);
     console.log(timer[timer.mode] * 60);
-
 }
+
 
 
 function handleMode(event) {

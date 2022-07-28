@@ -84,7 +84,7 @@
 
             &__circle {
                 transition: 0.5s;
-                transform: scale(-1, 1) rotate(270deg);
+                transform: rotate(270deg);
                 transform-origin: 50% 50%;
                 stroke: #F87070;
                 stroke-dasharray: 50 10;

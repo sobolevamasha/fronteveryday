@@ -180,9 +180,9 @@ body {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transform: scale(-1, 1) rotate(270deg);
-      -ms-transform: scale(-1, 1) rotate(270deg);
-          transform: scale(-1, 1) rotate(270deg);
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
