@@ -1,5 +1,5 @@
 const timer = {
-    pomodoro: 25,
+    pomodoro: 20,
     shortBreak: 5,
     longBreak: 15,
     longBreakInterval: 4,
@@ -133,11 +133,6 @@ function updateClock() {
 }
 
 
-
-
-
-
-
 function handleMode(event) {
     const {
         mode
@@ -151,4 +146,65 @@ function handleMode(event) {
 
 document.addEventListener('DOMContentLoaded', () => {
     switchMode('pomodoro');
+});
+
+
+/* MODAL */
+
+const modal = document.getElementById('modal');
+const openModal = document.querySelector('.timer__modal-btn');
+const closeModal = document.querySelector('.timer__modal-close');
+
+openModal.onclick = function () {
+    modal.style.display = 'block';
+}
+
+closeModal.onclick = function () {
+    modal.style.display = 'none';
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+const min = document.querySelectorAll('.timer__modal-min');
+const max = document.querySelectorAll('.timer__modal-max');
+const input = document.querySelectorAll('input[type="number"]');
+console.log(input);
+console.log(max);
+console.log(min);
+
+function stepUp() {
+    input.forEach(function (input) {
+        if (input.value >= 0 && input.value !== input.max) {
+            input.value = ++input.value;
+            console.log(input.value);
+        }
+    })
+}
+
+function stepDown() {
+    input.forEach(function (input) {
+        if (input.value > 0) {
+            input.value = --input.value;
+            console.log(input.value);
+        }
+    })
+}
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    const applyBtn = document.querySelector('.timer__modal-apply');
+    const body = document.getElementsByTagName('body');
+    const checkedInput = document.getElementById('font1').checked;
+    console.log(checkedInput);
+
+
+    applyBtn.onclick = function (checkedInput) {
+        if (checkedInput) {
+            body.setAttribute('style', 'font-family:Roboto Slab !important');
+            console.log('ok');
+        }
+    }
 });

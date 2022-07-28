@@ -43,6 +43,170 @@
                 </g>
             </svg>
         </button>
+        <div id="modal" class="timer__modal">
+            <div class="timer__modal-content">
+                <div class="timer__modal-top">
+                    <h2>Settings</h2>
+                    <span class="timer__modal-close">
+                        <svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M13.364 2.0502L11.9497 0.635986L6.99999 5.58573L2.05025 0.635986L0.636032 2.0502L5.58578 6.99995L0.636032 11.9497L2.05025 13.3639L6.99999 8.41416L11.9497 13.3639L13.364 11.9497L8.41421 6.99995L13.364 2.0502Z"
+                                fill="#1E213F" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="timer__modal-time">
+                    <h3 class="timer__modal-head timer__modal-mb">TIME (MINUTES)</h3>
+                    <div class="timer__modal-wrap">
+                        <div class="timer__modal-set">
+                            <div class="timer__modal-name">pomodoro</div>
+                            <div class="timer__modal-count">
+                                <input class="timer__modal-value" type="number" name="time1" value="20" min="0" max="30" id="field"
+                                    readonly="readonly">
+                                <div class="timer__modal-buttons">
+                                    <button class="timer__modal-max" type="button" onclick="stepUp(this)">
+                                        <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </button>
+                                    <button class="timer__modal-min" type="button" onclick="stepDown(this)">
+                                        <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timer__modal-set">
+                            <div class="timer__modal-name">short break</div>
+                            <div class="timer__modal-count">
+                                <input class="timer__modal-value" type="number" value="5" min="0" max="10" id="field2"
+                                    readonly="readonly">
+                                <div class="timer__modal-buttons">
+                                    <button class="timer__modal-max" onclick="stepUp(this)">
+                                        <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </button>
+                                    <button class="timer__modal-min" onclick="stepDown(this)">
+                                        <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timer__modal-set">
+                            <div class="timer__modal-name">long break</div>
+                            <div class="timer__modal-count">
+                                <input class="timer__modal-value" type="number" value="15" min="0" max="30" id="field3"
+                                    readonly="readonly">
+                                <div class="timer__modal-buttons">
+                                    <button class="timer__modal-max" type="button" onclick="stepUp(this)">
+                                        <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </button>
+                                    <button class="timer__modal-min" type="button" onclick="stepDown(this)">
+                                        <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timer__modal-fonts">
+                    <h3 class="timer__modal-head">FONT</h3>
+                    <div class="timer__modal-wrap">
+                        <div class="timer__modal-item font">
+                            <input type="radio" name="font" id="font1" style="font-family: 'Kumbh Sans';">
+                            <label for="font1">
+                                <span>
+                                    Aa
+                                </span>
+                            </label>
+                        </div>
+                        <div class="timer__modal-item font" style="font-family: 'Roboto Slab'; font-weight: 400;">
+                            <input type="radio" name="font" id="font2" style="font-family: 'Kumbh Sans';">
+                            <label for="font2">
+                                <span>
+                                    Aa
+                                </span>
+                            </label>
+                        </div>
+                        <div class="timer__modal-item font" style="font-family: 'Space Mono';" placeholder="Aa">
+                            <input type="radio" name="font" id="font3" style="font-family: 'Kumbh Sans';">
+                            <label for="font3">
+                                <span>
+                                    Aa
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timer__modal-colors">
+                    <h3 class="timer__modal-head">COLOR</h3>
+                    <div class="timer__modal-wrap">
+
+                        <div class="timer__modal-item color">
+                            <input type="radio" name="color" id="color1" style="font-family: 'Kumbh Sans';">
+                            <label for="color1">
+                                <span>
+                                    <svg class="color-checked" width="15" height="11" viewbox="0 0 15 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 5.5L4.95263 9.45263L13.4053 1" stroke="#161932" stroke-width="2" />
+                            </svg>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="timer__modal-item color">
+                            <input type="radio" name="color" id="color2" style="font-family: 'Kumbh Sans';">
+                            <label for="color2">
+                                <span>
+                                    <svg class="color-checked" width="15" height="11" viewbox="0 0 15 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 5.5L4.95263 9.45263L13.4053 1" stroke="#161932" stroke-width="2" />
+                            </svg>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="timer__modal-item color">
+                            <input type="radio" name="color" id="color3" style="font-family: 'Kumbh Sans';">
+                            <label for="color3">
+                                <span>
+                                    <svg class="color-checked" width="15" height="11" viewbox="0 0 15 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 5.5L4.95263 9.45263L13.4053 1" stroke="#161932" stroke-width="2" />
+                            </svg>
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="timer__modal-apply">Apply</button>
+            </div>
+        </div>
     </main>
     <script src="js/main.min.js"></script>
 </body>
