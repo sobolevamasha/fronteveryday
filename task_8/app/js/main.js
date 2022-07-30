@@ -115,6 +115,7 @@ function updateClock() {
     min.textContent = minutes;
     sec.textContent = seconds;
 
+
     const progress = document.querySelector('.progress__circle');
     progress.max = progress.getAttribute('max');
     console.log('max : ', progress.max);
@@ -171,39 +172,63 @@ window.onclick = function (event) {
 const min = document.querySelectorAll('.timer__modal-min');
 const max = document.querySelectorAll('.timer__modal-max');
 const input = document.querySelectorAll('input[type="number"]');
-console.log(input);
-console.log(max);
-console.log(min);
+
 
 function stepUp() {
-    input.forEach(function (input) {
-        if (input.value >= 0 && input.value !== input.max) {
-            input.value = ++input.value;
-            console.log(input.value);
-        }
-    })
+    const input = document.getElementById('field');
+    if (input.value >= 0 && input.value !== input.max) {
+        input.value = ++input.value;
+    }
 }
 
 function stepDown() {
-    input.forEach(function (input) {
-        if (input.value > 0) {
-            input.value = --input.value;
-            console.log(input.value);
-        }
-    })
+    const input = document.getElementById('field');
+    if (input.value > 0) {
+        input.value = --input.value;
+    }
+
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
-    const applyBtn = document.querySelector('.timer__modal-apply');
-    const body = document.getElementsByTagName('body');
-    const checkedInput = document.getElementById('font1').checked;
-    console.log(checkedInput);
-
-
-    applyBtn.onclick = function (checkedInput) {
-        if (checkedInput) {
-            body.setAttribute('style', 'font-family:Roboto Slab !important');
-            console.log('ok');
-        }
+function stepUp2() {
+    const input = document.getElementById('field2');
+    if (input.value >= 0 && input.value !== input.max) {
+        input.value = ++input.value;
     }
-});
+}
+
+function stepDown2() {
+    const input = document.getElementById('field2');
+    if (input.value > 0) {
+        input.value = --input.value;
+    }
+}
+
+function stepUp3() {
+    const input = document.getElementById('field3');
+    if (input.value >= 0 && input.value !== input.max) {
+        input.value = ++input.value;
+    }
+}
+
+function stepDown3() {
+    const input = document.getElementById('field3');
+    if (input.value > 0) {
+        input.value = --input.value;
+    }
+}
+
+const applyBtn = document.querySelector('.timer__modal-apply');
+const body = document.getElementsByTagName('body');
+const checkedInput = document.querySelectorAll('.font');
+console.log(checkedInput);
+
+for (item of checkedInput) {
+    item.addEventListener('click', function () {
+
+        for (el of checkedInput) {
+            el.classList.remove('checked');
+        }
+        this.classList.add('checked');
+
+    })
+}

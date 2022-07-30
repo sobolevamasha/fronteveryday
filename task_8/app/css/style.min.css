@@ -187,6 +187,7 @@ body {
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   stroke: #F87070;
+  stroke-lineCap: round;
   stroke-dasharray: 50 10;
 }
 .timer__btn {
@@ -366,13 +367,16 @@ body {
 .timer__modal-fonts .font input[type=radio] {
   display: none;
 }
-.timer__modal-fonts .font input[type=radio] + label {
-  color: #333;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
 .timer__modal-fonts .font input[type=radio] + label span {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 40px;
   height: 40px;
   vertical-align: middle;

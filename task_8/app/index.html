@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="body">
     <h1 class="title">pomodoro</h1>
     <main class="timer">
         <div class="timer__switchers">
@@ -61,17 +61,17 @@
                         <div class="timer__modal-set">
                             <div class="timer__modal-name">pomodoro</div>
                             <div class="timer__modal-count">
-                                <input class="timer__modal-value" type="number" name="time1" value="20" min="0" max="30" id="field"
+                                <input class="timer__modal-value" type="number" value="20" min="0" max="30" id="field"
                                     readonly="readonly">
                                 <div class="timer__modal-buttons">
-                                    <button class="timer__modal-max" type="button" onclick="stepUp(this)">
+                                    <button class="timer__modal-max" type="button" onclick="stepUp()">
                                         <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
                                                 stroke-width="2" />
                                         </svg>
                                     </button>
-                                    <button class="timer__modal-min" type="button" onclick="stepDown(this)">
+                                    <button class="timer__modal-min" type="button" onclick="stepDown()">
                                         <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
@@ -87,14 +87,14 @@
                                 <input class="timer__modal-value" type="number" value="5" min="0" max="10" id="field2"
                                     readonly="readonly">
                                 <div class="timer__modal-buttons">
-                                    <button class="timer__modal-max" onclick="stepUp(this)">
+                                    <button  class="timer__modal-max" onclick="stepUp2()">
                                         <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
                                                 stroke-width="2" />
                                         </svg>
                                     </button>
-                                    <button class="timer__modal-min" onclick="stepDown(this)">
+                                    <button  class="timer__modal-min" onclick="stepDown2()">
                                         <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
@@ -111,14 +111,14 @@
                                 <input class="timer__modal-value" type="number" value="15" min="0" max="30" id="field3"
                                     readonly="readonly">
                                 <div class="timer__modal-buttons">
-                                    <button class="timer__modal-max" type="button" onclick="stepUp(this)">
+                                    <button class="timer__modal-max" type="button" onclick="stepUp3()">
                                         <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
                                                 stroke-width="2" />
                                         </svg>
                                     </button>
-                                    <button class="timer__modal-min" type="button" onclick="stepDown(this)">
+                                    <button class="timer__modal-min" type="button" onclick="stepDown3()">
                                         <svg width="14" height="7" viewbox="0 0 14 7" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25"
@@ -134,8 +134,8 @@
                 <div class="timer__modal-fonts">
                     <h3 class="timer__modal-head">FONT</h3>
                     <div class="timer__modal-wrap">
-                        <div class="timer__modal-item font">
-                            <input type="radio" name="font" id="font1" style="font-family: 'Kumbh Sans';">
+                        <div class="timer__modal-item font" style="font-family: 'Kumbh Sans';">
+                            <input type="radio" name="font" id="font1">
                             <label for="font1">
                                 <span>
                                     Aa
@@ -143,15 +143,15 @@
                             </label>
                         </div>
                         <div class="timer__modal-item font" style="font-family: 'Roboto Slab'; font-weight: 400;">
-                            <input type="radio" name="font" id="font2" style="font-family: 'Kumbh Sans';">
+                            <input type="radio" name="font" id="font2" >
                             <label for="font2">
                                 <span>
                                     Aa
                                 </span>
                             </label>
                         </div>
-                        <div class="timer__modal-item font" style="font-family: 'Space Mono';" placeholder="Aa">
-                            <input type="radio" name="font" id="font3" style="font-family: 'Kumbh Sans';">
+                        <div class="timer__modal-item font" style="font-family: 'Space Mono';">
+                            <input type="radio" name="font" id="font3" >
                             <label for="font3">
                                 <span>
                                     Aa
@@ -166,7 +166,7 @@
                     <div class="timer__modal-wrap">
 
                         <div class="timer__modal-item color">
-                            <input type="radio" name="color" id="color1" style="font-family: 'Kumbh Sans';">
+                            <input type="radio" name="color" id="color1">
                             <label for="color1">
                                 <span>
                                     <svg class="color-checked" width="15" height="11" viewbox="0 0 15 11" fill="none"
@@ -178,7 +178,7 @@
                         </div>
 
                         <div class="timer__modal-item color">
-                            <input type="radio" name="color" id="color2" style="font-family: 'Kumbh Sans';">
+                            <input type="radio" name="color" id="color2">
                             <label for="color2">
                                 <span>
                                     <svg class="color-checked" width="15" height="11" viewbox="0 0 15 11" fill="none"
@@ -190,7 +190,7 @@
                         </div>
 
                         <div class="timer__modal-item color">
-                            <input type="radio" name="color" id="color3" style="font-family: 'Kumbh Sans';">
+                            <input type="radio" name="color" id="color3">
                             <label for="color3">
                                 <span>
                                     <svg class="color-checked" width="15" height="11" viewbox="0 0 15 11" fill="none"
